@@ -9,3 +9,5 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+I chose to return early where possible, not only so there's less code to execute, but also when reading it or debugging it's easier to keep track of where all the different codepaths lead. Which brings me to the nested if/else statements in the original, these I have "flattened", making it very easy to see what the requirements of a valid `partitionKey` are, and additionally makes it easy to step through.
